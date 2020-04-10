@@ -1,0 +1,24 @@
+{
+  "name": "next-fun",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@prisma/cli": "^2.0.0-beta.2",
+    "@types/node": "^13.11.1",
+    "@types/react": "^16.9.34",
+    "next": "^9.3.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.0.0-beta.2"
+  }
+}
