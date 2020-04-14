@@ -1,9 +1,9 @@
 import React from "react";
 import { GetServerSideProps } from "next";
-import { PrismaClient, Todo } from "@prisma/client";
 import { TodoList } from "../components/TodoList";
 import { AddTodo } from "../components/AddTodo";
 
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 interface SSP {
@@ -26,6 +26,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     orderBy: { name: "asc" },
     where: { done: false },
   });
+  // OR
+  // const todos = await prisma.raw<Todo[]>('SELECT * FROM "Todo" WHERE done=false ORDER BY name')
 
   return {
     props: { todos },
